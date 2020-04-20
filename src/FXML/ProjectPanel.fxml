@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="1000.0" style="-fx-background-color: #D8E3E4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProjectPanelController">
+    <children>
+      <JFXButton fx:id="addprojectBtn" layoutX="21.0" layoutY="193.0" onAction="#insertProject" prefHeight="42.0" prefWidth="181.0" style="-fx-background-color: #442f73;" text="Add Project" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clear_btn" layoutX="19.0" layoutY="260.0" onAction="#clear_all" prefHeight="42.0" prefWidth="381.0" style="-fx-background-color: #442f73;" text="Clear All" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="searchAllBtn" layoutX="727.0" layoutY="125.0" onAction="#searchProjects" prefHeight="42.0" prefWidth="258.0" style="-fx-background-color: #442f73;" text="Search All Projects" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <TextArea fx:id="resultArea" layoutX="15.0" layoutY="356.0" prefHeight="146.0" prefWidth="389.0" style="-fx-background-color: #ffadad;" wrapText="true">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font></TextArea>
+      <VBox layoutX="23.0" layoutY="37.0" prefHeight="123.0" prefWidth="117.0">
+         <children>
+            <Label prefHeight="22.0" prefWidth="117.0" text="Project  ID">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="140.0" text="Project Name">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="32.0" prefHeight="30.0" prefWidth="140.0" text="Department ID">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="140.0" layoutY="327.0" text="Result Console">
+         <font>
+            <Font name="MS Outlook" size="18.0" />
+         </font></Label>
+      <VBox layoutX="163.0" layoutY="27.0" prefHeight="146.0" prefWidth="239.0">
+         <children>
+            <TextField fx:id="ProjectidText" alignment="CENTER" prefHeight="31.0" prefWidth="179.0" promptText="Project ID">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="projectNameText" alignment="CENTER" prefHeight="34.0" prefWidth="249.0" promptText="Project Name">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="DeptidText" alignment="CENTER" layoutX="10.0" layoutY="54.0" prefHeight="34.0" prefWidth="249.0" promptText="Department ID">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </TextField>
+         </children>
+      </VBox>
+      <Separator layoutX="14.0" layoutY="13.0" prefHeight="0.0" prefWidth="920.0" />
+      <TableView fx:id="projectTable" editable="true" layoutX="439.0" layoutY="185.0" prefHeight="318.0" prefWidth="548.0" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn fx:id="proIdColumn" prefWidth="111.0" text="Project ID" />
+          <TableColumn fx:id="proNameColumn" minWidth="0.0" prefWidth="250.0" text="Project Name" />
+          <TableColumn fx:id="deptidColumn" minWidth="1.0" prefWidth="161.0" text="Department ID" />
+        </columns>
+      </TableView>
+      <Separator layoutX="417.0" layoutY="25.0" orientation="VERTICAL" prefHeight="478.0" prefWidth="6.0" />
+      <JFXButton fx:id="searchprojectBtn" layoutX="214.0" layoutY="193.0" onAction="#searchProject" prefHeight="42.0" prefWidth="181.0" style="-fx-background-color: #442f73;" text="Search Project" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="comprojectBtn" layoutX="439.0" layoutY="125.0" onAction="#deleteProject" prefHeight="42.0" prefWidth="181.0" style="-fx-background-color: #442f73;" text="Complete Project" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="442.0" layoutY="37.0" prefHeight="22.0" prefWidth="117.0" text="Employee ID">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="30.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="EmpidText" alignment="CENTER" layoutX="550.0" layoutY="27.0" prefHeight="42.0" prefWidth="160.0" promptText="Employee ID">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </TextField>
+      <JFXButton fx:id="seachbyIdBtn" layoutX="725.0" layoutY="27.0" onAction="#searchProjectbyEmpId" prefHeight="42.0" prefWidth="258.0" style="-fx-background-color: #442f73;" text="Search Project by Employee ID" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

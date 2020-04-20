@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="1000.0" style="-fx-background-color: #D8E3E4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PaidLeaveController">
+   <children>
+      <TableView fx:id="paidleaveTable" layoutX="111.0" layoutY="118.0" prefHeight="319.0" prefWidth="779.0">
+        <columns>
+          <TableColumn fx:id="empIdColumn" prefWidth="228.0" text="Employee ID" />
+          <TableColumn fx:id="leaveColumn" prefWidth="297.0" text="Leave" />
+            <TableColumn fx:id="salaryColumn" prefWidth="253.0" text="Updated Salary" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="show" layoutX="425.0" layoutY="60.0" onAction="#searchEmployees" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: #442f73;" text="Show All" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

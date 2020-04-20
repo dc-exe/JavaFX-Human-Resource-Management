@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1000.0" style="-fx-background-color: #D8E3E4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DepartmentPanelController">
+   <children>
+      <JFXButton fx:id="addDeptBtn" layoutX="31.0" layoutY="135.0" onAction="#insertDepartment" prefHeight="44.0" prefWidth="285.0" style="-fx-background-color: #442f73;" text="Add Department" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clear_btn" layoutX="31.0" layoutY="205.0" onAction="#clear_all" prefHeight="44.0" prefWidth="285.0" style="-fx-background-color: #442f73;" text="Clear All" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="searchAllBtn" layoutX="679.0" layoutY="125.0" onAction="#searchDepartments" prefHeight="44.0" prefWidth="293.0" style="-fx-background-color: #442f73;" text="Search All Departments" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <TextArea fx:id="resultArea" layoutX="31.0" layoutY="356.0" prefHeight="137.0" prefWidth="285.0" style="-fx-background-color: #ffadad;" wrapText="true">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font></TextArea>
+      <Label layoutX="104.0" layoutY="310.0" text="Result Console">
+         <font>
+            <Font name="MS Outlook" size="18.0" />
+         </font></Label>
+      <Label layoutX="264.0" layoutY="31.0" prefHeight="30.0" prefWidth="140.0" text="Department Name">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="35.0" prefHeight="22.0" prefWidth="117.0" text="Department  ID">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="DeptnameText" layoutX="264.0" layoutY="83.0" prefHeight="34.0" prefWidth="249.0" promptText="Deptartment Name">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="DeptidText" layoutX="31.0" layoutY="83.0" prefHeight="31.0" prefWidth="179.0" promptText="Department ID">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </TextField>
+      <Separator layoutX="14.0" layoutY="13.0" prefHeight="0.0" prefWidth="920.0" />
+      <TableView fx:id="departmentTable" editable="true" layoutX="350.0" layoutY="185.0" prefHeight="306.0" prefWidth="622.0" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn fx:id="deptIdColumn" prefWidth="153.0" text="Dept ID" />
+          <TableColumn fx:id="deptNameColumn" prefWidth="264.0" text="Dept Name" />
+          <TableColumn fx:id="totalEmpColumn" minWidth="1.0" prefWidth="191.0" text="Total Employees" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

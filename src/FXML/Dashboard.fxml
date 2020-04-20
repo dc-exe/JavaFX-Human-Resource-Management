@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ProgressIndicator?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DashboardController">
+   <children>
+      <HBox fx:id="titlebar" alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="1366.0" style="-fx-background-color: silver;">
+         <children>
+            <ImageView fitHeight="51.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icon.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="27.0" prefWidth="1314.0" style="-fx-background-color: silver;" text="HR's Engine">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="close_btn" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/close_window_48px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets right="1.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="27.0" prefHeight="782.0" prefWidth="300.0" style="-fx-background-color: #323544;">
+         <children>
+            <AnchorPane prefHeight="165.0" prefWidth="300.0" style="-fx-background-color: #0094D6;">
+               <children>
+                  <Label layoutX="50.0" layoutY="23.0" prefHeight="53.0" prefWidth="125.0" text="HR's" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Harlow Solid Italic" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="73.0" prefHeight="31.0" prefWidth="113.0" text="Engine" wrapText="true">
+                     <font>
+                        <Font name="Harlow Solid Italic" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="img_dash" fitHeight="20.0" fitWidth="20.0" layoutX="35.0" layoutY="184.0" onMouseClicked="#handleButtonClicks" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/speedometer_24px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_add" fitHeight="20.0" fitWidth="20.0" layoutX="35.0" layoutY="234.0" onMouseClicked="#handleButtonClicks" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/customer_support_30px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_project" fitHeight="20.0" fitWidth="20.0" layoutX="35.0" layoutY="284.0" onMouseClicked="#handleButtonClicks" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/task_completed_30px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_assign" fitHeight="20.0" fitWidth="20.0" layoutX="35.0" layoutY="334.0" onMouseClicked="#handleButtonClicks" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/department_32px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_attendance" fitHeight="20.0" fitWidth="20.0" layoutX="35.0" layoutY="384.0" onMouseClicked="#handleButtonClicks" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/checklist_24px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_payroll" fitHeight="20.0" fitWidth="20.0" layoutX="35.0" layoutY="434.0" onMouseClicked="#handleButtonClicks" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/receive_cash_26px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_payroll1" fitHeight="20.0" fitWidth="20.0" layoutX="35.0" layoutY="484.0" onMouseClicked="#handleButtonClicks" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/leave_24px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <JFXButton fx:id="logout" cancelButton="true" layoutX="98.0" layoutY="681.0" onMouseClicked="#handleButtonClicks" prefHeight="41.0" prefWidth="104.0" style="-fx-background-color: #0094D6;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn_dash" alignment="CENTER" layoutY="168.0" onMouseClicked="#handleButtonClicks" prefHeight="50.0" prefWidth="300.0" text="Dashboard                " textFill="#d7d7d7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="employee" alignment="CENTER" layoutY="218.0" onMouseClicked="#handleButtonClicks" prefHeight="50.0" prefWidth="300.0" text="Employee                 " textFill="#d7d7d7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="projects" alignment="CENTER" layoutY="268.0" onMouseClicked="#handleButtonClicks" prefHeight="50.0" prefWidth="300.0" text="Projects                    " textFill="#d7d7d7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="department" alignment="CENTER" layoutY="318.0" onMouseClicked="#handleButtonClicks" prefHeight="50.0" prefWidth="300.0" text="Department             " textFill="#d7d7d7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="attendance" alignment="CENTER" layoutY="368.0" onMouseClicked="#handleButtonClicks" prefHeight="50.0" prefWidth="300.0" text="Attendance             " textFill="#d7d7d7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="payroll" alignment="CENTER" layoutY="418.0" onMouseClicked="#handleButtonClicks" prefHeight="50.0" prefWidth="300.0" text="Payroll Management" textFill="#d7d7d7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="leave" alignment="CENTER" layoutY="468.0" onMouseClicked="#handleButtonClicks" prefHeight="50.0" prefWidth="300.0" text="Paid Leave               " textFill="#d7d7d7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane accessibleRole="COMBO_BOX" layoutX="300.0" layoutY="27.0" prefHeight="743.0" prefWidth="1066.0" style="-fx-background-color: #D8E3E4;">
+         <children>
+            <AnchorPane prefHeight="165.0" prefWidth="1066.0" style="-fx-background-color: white;">
+               <children>
+                  <Label fx:id="panel_title" layoutX="24.0" layoutY="62.0" prefHeight="41.0" prefWidth="277.0" text="Dashboard" textFill="#464646">
+                     <font>
+                        <Font name="Calibri Light" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <BorderPane fx:id="borderpane" layoutY="165.0" prefHeight="578.0" prefWidth="1066.0" style="-fx-background-color: #D8E3E4;">
+               <bottom>
+                  <HBox prefHeight="325.0" prefWidth="1066.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="319.0" prefWidth="355.0" style="-fx-background-color: #8EB5C5;" styleClass="card-01" stylesheets="@stylesheet.css">
+                           <children>
+                              <Label prefHeight="58.0" prefWidth="355.0" style="-fx-background-color: #64C1F4; -fx-alignment: CENTER;" text="Total Employees">
+                                 <font>
+                                    <Font name="Calibri Bold" size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="180.0" style="-fx-alignment: CENTER; -fx-border-color: #498DB4;" styleClass="round-box" stylesheets="@stylesheet.css">
+                                 <children>
+                                    <ProgressIndicator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="167.0" prefWidth="167.0" progress="0.71" radius="80.0" styleClass="progress" stylesheets="@stylesheet.css">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ProgressIndicator>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label fx:id="totalEmp" contentDisplay="CENTER" layoutX="10.0" layoutY="278.0" prefHeight="61.0" prefWidth="355.0" style="-fx-background-color: #64C1F4; -fx-alignment: CENTER;" text="10">
+                                 <font>
+                                    <Font name="Calibri Bold" size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" layoutX="365.0" layoutY="10.0" prefHeight="319.0" prefWidth="355.0" styleClass="card-03" stylesheets="@stylesheet.css">
+                           <children>
+                              <Label prefHeight="66.0" prefWidth="355.0" style="-fx-background-color: #FFC664; -fx-alignment: CENTER;" text="Total Departments">
+                                 <font>
+                                    <Font name="Calibri Bold" size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="180.0" style="-fx-alignment: CENTER; -fx-border-color: #498DB4;" styleClass="round-box" stylesheets="@stylesheet.css">
+                                 <children>
+                                    <ProgressIndicator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="167.0" prefWidth="167.0" progress="0.71" radius="80.0" styleClass="progress" stylesheets="@stylesheet.css">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ProgressIndicator>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label fx:id="totalDept" contentDisplay="CENTER" layoutX="10.0" layoutY="278.0" prefHeight="72.0" prefWidth="355.0" style="-fx-background-color: #FFC664; -fx-alignment: CENTER;" text="9">
+                                 <font>
+                                    <Font name="Calibri Bold" size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="319.0" prefWidth="355.0" styleClass="card-02" stylesheets="@stylesheet.css">
+                           <children>
+                              <Label prefHeight="59.0" prefWidth="355.0" style="-fx-background-color: #3AABAD; -fx-alignment: CENTER;" text="Total Projects">
+                                 <font>
+                                    <Font name="Calibri Bold" size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="180.0" style="-fx-alignment: CENTER; -fx-border-color: #498DB4;" styleClass="round-box" stylesheets="@stylesheet.css">
+                                 <children>
+                                    <ProgressIndicator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="167.0" prefWidth="167.0" progress="0.71" radius="80.0" styleClass="progress" stylesheets="@stylesheet.css">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ProgressIndicator>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label fx:id="totalPro" contentDisplay="CENTER" layoutX="10.0" layoutY="278.0" prefHeight="61.0" prefWidth="355.0" style="-fx-background-color: #3AABAD; -fx-alignment: CENTER;" text="5">
+                                 <font>
+                                    <Font name="Calibri Bold" size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </bottom>
+               <center>
+                  <ImageView fitHeight="292.0" fitWidth="956.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../images/Annotation%202020-04-19%20133841.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </center></BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

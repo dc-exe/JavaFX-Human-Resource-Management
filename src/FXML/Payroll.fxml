@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="1000.0" style="-fx-background-color: #D8E3E4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PayrollController">
+    <children>
+      <JFXButton fx:id="addsalaryBtn" layoutX="163.0" layoutY="185.0" onAction="#insertSalary" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: #442f73;" text="Add Salary" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="updatesalaryBtn" layoutX="439.0" layoutY="53.0" onAction="#updateEmployeeSalary" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #442f73;" text="Update salary" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clear_btn" layoutX="20.0" layoutY="259.0" onAction="#clear_all" prefHeight="34.0" prefWidth="381.0" style="-fx-background-color: #442f73;" text="Clear All" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="searchAllBtn" layoutX="733.0" layoutY="130.0" onAction="#searchSalaries" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: #442f73;" text="Show All Employees Salary" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+      <TextArea fx:id="resultArea" layoutX="23.0" layoutY="356.0" prefHeight="137.0" prefWidth="381.0" style="-fx-background-color: #ffadad;" wrapText="true">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font></TextArea>
+      <VBox layoutX="23.0" layoutY="37.0" prefHeight="137.0" prefWidth="117.0">
+         <children>
+            <Label prefHeight="121.0" prefWidth="117.0" text="Employee ID">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="68.0" prefWidth="117.0" text="Salary Amount">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="140.0" layoutY="327.0" text="Result Console">
+         <font>
+            <Font name="MS Outlook" size="18.0" />
+         </font></Label>
+      <VBox layoutX="163.0" layoutY="50.0" prefHeight="125.0" prefWidth="239.0">
+         <children>
+            <TextField fx:id="empidText" alignment="CENTER" prefHeight="34.0" prefWidth="239.0" promptText="Employee ID">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="amountText" alignment="CENTER" prefHeight="37.0" prefWidth="239.0" promptText="Salary Amount">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <Separator layoutX="14.0" layoutY="13.0" prefHeight="0.0" prefWidth="920.0" />
+      <TableView fx:id="salaryTable" editable="true" layoutX="439.0" layoutY="185.0" prefHeight="306.0" prefWidth="533.0" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn fx:id="empIdColumn" prefWidth="181.0" text="Employee ID" />
+          <TableColumn fx:id="amountColumn" minWidth="1.0" prefWidth="339.0" text="Salary Amount" />
+        </columns>
+      </TableView>
+      <Separator layoutX="417.0" layoutY="25.0" orientation="VERTICAL" prefHeight="467.0" prefWidth="0.0" />
+      <JFXButton fx:id="searchsalaryBtn" layoutX="439.0" layoutY="124.0" onAction="#searchSalary" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #442f73;" text="Search salary" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
